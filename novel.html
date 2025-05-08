@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="تعليم الرياضيات للمدارس اللغات لجميع المراحل التعليميه" />
+  <title>Yasser Accademy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('big-image.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      padding: 0.75rem 2rem;
+      background: #e63946;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: #ff6b6b;
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 1.5rem;
+    }
+    section#novels {
+      background: #121212;
+      padding: 4rem 2rem;
+    }
+    .novel-grid {
+      hight:10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .novel {
+     height:350px;
+width:430px;
+      background: #1f1f1f;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .novel:hover {
+      transform: translateY(-10px);
+    }
+    .novel img {
+      width: 400px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .novel h3 {
+      margin-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .novel p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .about {
+      background-color: #1a1a1a;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .about p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #ddd;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .about img {
+      width: 100px;
+      margin-top: 1.5rem;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav><strong>Yasser Accademy</strong></nav>
+  <header>
+    <h1>Welcome to Yasser Accademy</h1>
+    <p>طريق الافضل لتعلم الرياضيات</p>
+<a href="https://yasseraccademy.nzmly.com/">
+    <button class="btn">GET STARTED</button>
+  </a>
+
+  </header>
+
+  <section class="about" data-aos="fade-up">
+    <h2>من نحن؟</h2>
+    <p> منصة yasser accademy منصه تفاعليه مع الطلاب لجميع المراحل التعليميه واسعار رمزيه 
+    </p>
+    <img src="all-pages-2.png" alt="books icon" />
+  </section>
+
+  <section id="novels">
+    <h2 data-aos="fade-up"></h2>
+    <div class="novel-grid">
+      <div class="novel" data-aos="fade-up">
+        <img src="facebook-app-icon.webp" alt="Novel Cover" />
+        <h3>تواصل معنا </h3>
+        <p>yasser abo elhamd</p>
+<a href="https://www.facebook.com/yasr.abwalhmd?locale=ar_AR">
+    <button class="btn">Face Book</button>
+  </a>
+      </div>
+      
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>
