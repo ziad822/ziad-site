@@ -1,157 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta charset="UTF-8" />
-  <meta name="keywords" content="تعليم الرياضيات للمدارس اللغات لجميع المراحل التعليميه" />
-  <title>Yasser Accademy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coda zone</title>
   <style>
+    body {
+      height: 2000px;
+    }
+
     * {
+      font-family: sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: #fff;
-      background: #000;
-      overflow-x: hidden;
-    }
+
     header {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('big-image.jpg') center/cover no-repeat;
+      position: fixed;
+      width: 100%;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 100px;
+      z-index: 1000;
+      transition: 0.2s ease;
+    }
+
+    header.sticky {
+      background: #fff;
+      padding: 10px 100px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header .logo {
+      font-size: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      color: aliceblue;
+    }
+
+    header.sticky .logo {
+      color: #0c9dc9;
+    }
+
+    header .nav {
+      position: relative;
+      display: flex;
+    }
+
+    header .nav li {
+      list-style: none;
+      margin-left: 20px;
+      color: rgb(255, 255, 255);
+    }
+
+    header .nav li a {
+      font-size: 20px;
+      font-weight: 300;
+      text-decoration: none;
+      color: aliceblue;
+      transition: 0.2s ease;
+    }
+
+    header .nav li a:hover {
+      scale: 1.2;
+      color: aqua;
+    }
+header.sticky .nav li a{
+color: #0c9dc9 ;
+
+}
+header.sticky .nav li a:hover{
+    color: aqua;
+}
+    .ban {
+      width: 100%;
+      height: 700px;
+      display: flex;
       justify-content: center;
       align-items: center;
+      background: url(code.jpg);
+      background-size: cover;
+    }
+
+    .ban .container {
       text-align: center;
-      padding: 2rem;
+      width: 900px;
     }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      animation: fadeInDown 1.2s ease-in-out;
+
+    .ban .container h2 {
+      color: aliceblue;
+      font-size: 50px;
+      margin-bottom: 50px;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+
+    .ban .container p {
+      color: aliceblue;
+      font-size: 20px;
     }
+
     .btn {
-      padding: 0.75rem 2rem;
-      background: #e63946;
-      color: white;
-      border: none;
-      border-radius: 50px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
+      color: rgb(33, 126, 202);
+      text-decoration: none;
+      font-size: 20px;
+      background: rgb(255, 255, 255);
+      padding: 8px 15px;
+      transition: 0.3s;
+      border-radius: 6px;
     }
+
     .btn:hover {
-      background: #ff6b6b;
+      scale: 1.2;
     }
-    nav {
-      position: absolute;
-      top: 20px;
-      left: 30px;
-      font-size: 1.5rem;
+    .we{
+    
+        font-size: 30px;
+        padding-top: 20px;
     }
-    section#novels {
-      background: #121212;
-      padding: 4rem 2rem;
+    .info{
+        
+        font-size:20px;
     }
-    .novel-grid {
-      hight:10px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    section{
+padding: 80px;
+
     }
-    .novel {
-     height:350px;
-width:430px;
-      background: #1f1f1f;
-      padding: 1rem;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    .novel:hover {
-      transform: translateY(-10px);
-    }
-    .novel img {
-      width: 400px;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .novel h3 {
-      margin-bottom: 0.5rem;
-      font-family: 'Playfair Display', serif;
-    }
-    .novel p {
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-    .about {
-      background-color: #1a1a1a;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .about p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #ddd;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .about img {
-      width: 100px;
-      margin-top: 1.5rem;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .row {
+  display: flex;
+  flex-direction: row-reverse; /* عكس الترتيب عشان العربي */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.row .slid {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.row .slid img {
+  max-width: 100%;
+  width: 500px; /* حجم الصورة */
+  height: 300px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+}
+
   </style>
 </head>
 <body>
-  <nav><strong>Yasser Accademy</strong></nav>
   <header>
-    <h1>Welcome to Yasser Accademy</h1>
-    <p>طريق الافضل لتعلم الرياضيات</p>
-<a href="https://yasseraccademy.nzmly.com/">
-    <button class="btn">GET STARTED</button>
-  </a>
-
+    <a href="#" class="logo">Coda zone</a>
+    <nav>
+      <ul class="nav">
+        <li><a href="#">home</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">courses</a></li>
+        <li><a href="#">contact us</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="about" data-aos="fade-up">
-    <h2>من نحن؟</h2>
-    <p> منصة yasser accademy منصه تفاعليه مع الطلاب لجميع المراحل التعليميه واسعار رمزيه 
-    </p>
-    <img src="all-pages-2.png" alt="books icon" />
+  <section class="ban">
+    <div class="container">
+      <h2>Join now</h2>
+      <p>Your first step to learn programming the future</p>
+      <a href="#" class="btn">JOIN</a>
+    </div>
+  </section>
+  <section class="about">
+    <div class="row">
+        <div class="slid">
+            <h2 align="right" class="we">احنامين؟؟</h2>
+            <p align="right" class="info"> ازيك يا يشمهندس باذن الله في الموقع ده <br> <br>هنتعلم ازاي
+            نعمل موقع كامل من الصفر وهعرفك <br><br>ازاي تنشره على جوجل كمان وكل ده ببلاش <br><br> ابدا يلا يا نجم واتعلم وبعدها اكسب بالدولار</p>
+        </div>
+        <div class="slid"> 
+            <img src="small.jpg" alt="">
+        </div>
+    </div>
+<div class="dis">
+
+
+</div>
+
   </section>
 
-  <section id="novels">
-    <h2 data-aos="fade-up"></h2>
-    <div class="novel-grid">
-      <div class="novel" data-aos="fade-up">
-        <img src="facebook-app-icon.webp" alt="Novel Cover" />
-        <h3>تواصل معنا </h3>
-        <p>yasser abo elhamd</p>
-<a href="https://www.facebook.com/yasr.abwalhmd?locale=ar_AR">
-    <button class="btn">Face Book</button>
-  </a>
-      </div>
-      
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- ✅ JavaScript مربوط هنا -->
   <script>
-    AOS.init({ duration: 1000 });
+    var header = document.querySelector('header');
+    window.addEventListener('scroll', function () {
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
   </script>
 </body>
 </html>
