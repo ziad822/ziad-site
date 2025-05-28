@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>coda zone</title>
   <style>
-    body {
-      height: 2000px;
-    }
-
     * {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    body {
+      height: 1000px;
     }
 
     header {
@@ -45,14 +45,12 @@
     }
 
     header .nav {
-      position: relative;
       display: flex;
     }
 
     header .nav li {
       list-style: none;
       margin-left: 20px;
-      color: rgb(255, 255, 255);
     }
 
     header .nav li a {
@@ -64,16 +62,18 @@
     }
 
     header .nav li a:hover {
-      scale: 1.2;
+      transform: scale(1.2);
       color: aqua;
     }
-header.sticky .nav li a{
-color: #0c9dc9 ;
 
-}
-header.sticky .nav li a:hover{
-    color: aqua;
-}
+    header.sticky .nav li a {
+      color: #0c9dc9;
+    }
+
+    header.sticky .nav li a:hover {
+      color: aqua;
+    }
+
     .ban {
       width: 100%;
       height: 700px;
@@ -113,47 +113,111 @@ header.sticky .nav li a:hover{
     }
 
     .btn:hover {
-      scale: 1.2;
+      transform: scale(1.2);
     }
-    .we{
-    
-        font-size: 30px;
-        padding-top: 20px;
-    }
-    .info{
-        
-        font-size:20px;
-    }
-    section{
-padding: 80px;
 
+    .we {
+      font-size: 30px;
+      padding-top: 20px;
     }
+
+    .info {
+      font-size: 20px;
+    }
+
+    section {
+      padding: 80px;
+    }
+
     .row {
-  display: flex;
-  flex-direction: row-reverse; /* عكس الترتيب عشان العربي */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 30px;
-}
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 30px;
+    }
 
-.row .slid {
-  width: 50%;
-  padding: 0 20px;
-}
+    .row .slid {
+      width: 50%;
+      padding: 0 20px;
+    }
 
-.row .slid img {
-  max-width: 100%;
-  width: 500px; /* حجم الصورة */
-  height: 300px;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
-}
+    .row .slid img {
+      max-width: 100%;
+      width: 500px;
+      height: 300px;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
 
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 50px;
+      color: #0c9dc9;
+      transition: all 0.5s ease-in-out;
+    }
 
-}
+    .steps, .testimonials {
+      background: #f8f9fa;
+      padding: 100px 80px;
+      transition: background 1s ease;
+    }
 
+    .step-row, .testimonial-row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .step-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .step-box img {
+      max-width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial {
+      width: 45%;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+
+    .testimonial:hover {
+      transform: scale(1.05);
+    }
+
+    .testimonial p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .testimonial h4 {
+      margin-top: 15px;
+      color: #0c9dc9;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -177,25 +241,57 @@ padding: 80px;
       <a href="#" class="btn">JOIN</a>
     </div>
   </section>
+
   <section class="about">
     <div class="row">
-        <div class="slid">
-            <h2 align="right" class="we">احنامين؟؟</h2>
-            <p align="right" class="info"> ازيك يا يشمهندس باذن الله في الموقع ده <br> <br>هنتعلم ازاي
-            نعمل موقع كامل من الصفر وهعرفك <br><br>ازاي تنشره على جوجل كمان وكل ده ببلاش <br><br> ابدا يلا يا نجم واتعلم وبعدها اكسب بالدولار</p>
-        </div>
-        <div class="slid"> 
-            <img src="small.jpg" alt="">
-        </div>
+      <div class="slid">
+        <h2 align="right" class="we">احنا مين؟؟</h2>
+        <p align="right" class="info">ازيك يا يشمهندس باذن الله في الموقع ده <br><br>
+        هنتعلم ازاي نعمل موقع كامل من الصفر وهعرفك <br><br>
+        ازاي تنشره على جوجل كمان وكل ده ببلاش <br><br>
+        ابدا يلا يا نجم واتعلم وبعدها اكسب بالدولار</p>
+      </div>
+      <div class="slid"> 
+        <img src="small.jpg" alt="">
+      </div>
     </div>
-<div class="dis">
-
-
-</div>
-
   </section>
 
-  <!-- ✅ JavaScript مربوط هنا -->
+  <section class="steps">
+    <h2 class="section-title">رحلتك معانا 👨‍💻</h2>
+    <div class="step-row">
+      <div class="step-box">
+        <img src="learn.jpg" alt="تعلم الأساسيات">
+        <h3>ابدأ من الصفر</h3>
+        <p>هنتعلم الأساسيات مع بعض خطوة بخطوة، حتى لو أول مرة تشوف كود! 🚀</p>
+      </div>
+      <div class="step-box">
+        <img src="build.jpg" alt="بناء مواقع">
+        <h3>نصمم مواقع رهيبة</h3>
+        <p>هنبدأ نطبق عملي ونبني مواقع كاملة بإيدينا، ونخليها متوافقة مع كل الشاشات 🔥</p>
+      </div>
+      <div class="step-box">
+        <img src="launch.jpg" alt="نشر الموقع">
+        <h3>انطلق للعالم</h3>
+        <p>هنتعلم ازاي نرفع موقعك على الإنترنت ويكون ظاهر في جوجل 🌍</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2 class="section-title">ناس جربت وقالت 💬</h2>
+    <div class="testimonial-row">
+      <div class="testimonial">
+        <p>"الموقع ده غير حياتي! بدأت أشتغل كمطور بعد الكورس ده 💼"</p>
+        <h4>محمد من مصر</h4>
+      </div>
+      <div class="testimonial">
+        <p>"ببساطة أفضل مكان تعلمت فيه بدون تعقيد، شكراً يا نجم 🌟"</p>
+        <h4>سارة من السعودية</h4>
+      </div>
+    </div>
+  </section>
+
   <script>
     var header = document.querySelector('header');
     window.addEventListener('scroll', function () {
